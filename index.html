@@ -11,9 +11,12 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f5f5f7; color: #111; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
-        :root { --gold: #C5A065; }
+        
+        /* UPDATED GOLD: Darker and richer for better visibility on white */
+        :root { --gold: #b48e43; } 
         .text-gold { color: var(--gold); }
         .bg-gold { background-color: var(--gold); }
+        
         .glass-dark {
             background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(20px);
@@ -24,9 +27,12 @@
         .group:hover .hover-lift { transform: translateY(-5px); }
         .chat-open { transform: translateY(0) scale(1); opacity: 1; pointer-events: all; }
         .chat-closed { transform: translateY(20px) scale(0.95); opacity: 0; pointer-events: none; }
+        
+        /* New Text Shadow for extra visibility */
+        .text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
     </style>
 </head>
-<body class="antialiased selection:bg-[#C5A065] selection:text-white">
+<body class="antialiased selection:bg-[#b48e43] selection:text-white">
 
     <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
         <div class="bg-white rounded-full px-8 py-4 flex justify-between items-center w-full max-w-5xl shadow-xl shadow-black/5 border border-white/50">
@@ -38,9 +44,9 @@
                 <a href="#about" class="hover:text-black transition duration-300">About</a>
                 <a href="#gallery" class="hover:text-black transition duration-300">Gallery</a>
             </div>
-            <button onclick="toggleChat()" class="bg-black text-white px-6 py-2.5 rounded-full text-xs font-semibold tracking-wide hover:bg-gold transition shadow-lg hover:shadow-xl transform active:scale-95 duration-300">
-                Book Now
-            </button>
+            <a href="https://wa.me/27614964840" class="bg-black text-white px-6 py-2.5 rounded-full text-xs font-semibold tracking-wide hover:bg-gold transition shadow-lg hover:shadow-xl transform active:scale-95 duration-300 flex items-center gap-2">
+                <i class="fab fa-whatsapp"></i> Book Now
+            </a>
         </div>
     </nav>
 
@@ -54,18 +60,20 @@
             <div class="inline-block bg-white/80 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-white/40 shadow-sm">
                 <span class="text-xs font-bold tracking-widest uppercase text-gray-800">Sandton • Johannesburg</span>
             </div>
+            
             <h1 class="text-6xl md:text-8xl font-medium mb-8 text-gray-900 leading-tight tracking-tight drop-shadow-sm">
-                Natural. <span class="italic text-gold">Refined.</span><br>You.
+                Natural. <span class="italic text-gold text-shadow-sm font-semibold">Refined.</span><br>You.
             </h1>
+            
             <p class="text-gray-800 text-lg mb-10 font-light max-w-lg mx-auto leading-relaxed bg-white/60 backdrop-blur-md p-4 rounded-2xl shadow-sm">
                 The premier destination for protective styling and natural hair health in the heart of Sandown Valley.
             </p>
             <div class="flex justify-center gap-4">
                 <button onclick="toggleChat()" class="bg-black text-white px-10 py-4 rounded-full text-sm font-bold tracking-wide hover:bg-gray-800 transition shadow-2xl transform hover:-translate-y-1">
-                    Check Availability
+                    Ask AI Agent
                 </button>
-                <a href="#gallery" class="bg-white text-black px-10 py-4 rounded-full text-sm font-bold tracking-wide hover:bg-gray-50 transition shadow-lg transform hover:-translate-y-1">
-                    View Portfolio
+                <a href="https://wa.me/27614964840" class="bg-white text-black px-10 py-4 rounded-full text-sm font-bold tracking-wide hover:bg-gray-50 transition shadow-lg transform hover:-translate-y-1 flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
             </div>
         </div>
@@ -85,7 +93,7 @@
                     <div class="glass-dark p-6 rounded-[2rem] backdrop-blur-xl border border-white/10">
                         <h3 class="text-2xl text-white serif italic mb-2">Precision Braids</h3>
                         <p class="text-gray-300 text-xs mb-4">Knotless • Cornrows • Straight Backs</p>
-                        <button onclick="toggleChat()" class="w-full bg-white text-black py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-gold hover:text-white transition">Book Slot</button>
+                        <button onclick="toggleChat()" class="w-full bg-white text-black py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-gold hover:text-white transition">Check Availability</button>
                     </div>
                 </div>
             </div>
@@ -97,7 +105,7 @@
                     <div class="glass-dark p-6 rounded-[2rem] backdrop-blur-xl border border-white/10">
                         <h3 class="text-2xl text-white serif italic mb-2">Natural Care</h3>
                         <p class="text-gray-300 text-xs mb-4">Treatments • Silk Press • Products</p>
-                        <button onclick="toggleChat()" class="w-full bg-white text-black py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-gold hover:text-white transition">Book Slot</button>
+                        <button onclick="toggleChat()" class="w-full bg-white text-black py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-gold hover:text-white transition">Check Availability</button>
                     </div>
                 </div>
             </div>
@@ -109,7 +117,7 @@
                     <div class="glass-dark p-6 rounded-[2rem] backdrop-blur-xl border border-white/10">
                         <h3 class="text-2xl text-white serif italic mb-2">Sleek Styling</h3>
                         <p class="text-gray-300 text-xs mb-4">Ponytails • Updos • Events</p>
-                        <button onclick="toggleChat()" class="w-full bg-white text-black py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-gold hover:text-white transition">Book Slot</button>
+                        <button onclick="toggleChat()" class="w-full bg-white text-black py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-gold hover:text-white transition">Check Availability</button>
                     </div>
                 </div>
             </div>
@@ -189,11 +197,18 @@
                 <img src="486604295_4151385335145160_33174220502223752_n.jpg" class="h-14 mx-auto filter brightness-0 invert opacity-80">
             </div>
             <h2 class="serif text-3xl md:text-4xl italic mb-10 text-gray-200">"Invest in your hair, it is the crown you never take off."</h2>
-            <div class="flex justify-center gap-6 mb-16">
-                <a href="https://www.instagram.com/Azande%20Madlala" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition backdrop-blur-md"><i class="fab fa-instagram text-lg"></i></a>
-                <a href="https://www.tiktok.com/@azandem_ii" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition backdrop-blur-md"><i class="fab fa-tiktok text-lg"></i></a>
-                <a href="https://wa.me/27614964840" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition backdrop-blur-md"><i class="fab fa-whatsapp text-lg"></i></a>
+            
+            <div class="flex justify-center gap-6 mb-12">
+                 <a href="https://wa.me/27614964840" class="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-[#25D366]/50 transition transform hover:-translate-y-1">
+                    <i class="fab fa-whatsapp text-2xl"></i> Chat on WhatsApp
+                </a>
             </div>
+
+            <div class="flex justify-center gap-6 mb-16 opacity-70">
+                <a href="https://www.instagram.com/Azande%20Madlala" target="_blank" class="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@azandem_ii" target="_blank" class="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition"><i class="fab fa-tiktok"></i></a>
+            </div>
+            
             <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 uppercase tracking-widest border-t border-white/10 pt-8">
                 <p>2 Sandown Valley Crescent, JHB</p>
                 <p class="mt-4 md:mt-0">© 2026 Azande Hair. Automated by Automania.</p>
@@ -202,31 +217,32 @@
     </footer>
 
     <button onclick="toggleChat()" class="fixed bottom-8 right-8 z-50 bg-black text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300 group ring-4 ring-white/20">
-        <i class="fas fa-comment text-xl group-hover:hidden text-gold"></i>
+        <i class="fas fa-robot text-xl group-hover:hidden text-gold"></i>
         <i class="fas fa-times text-xl hidden group-hover:block text-gold"></i>
     </button>
     <div id="chat-window" class="fixed bottom-28 right-8 w-80 bg-white rounded-3xl shadow-2xl z-50 border border-gray-100 transition-all duration-300 chat-closed flex flex-col h-[450px] overflow-hidden ring-1 ring-black/5">
         <div class="bg-black/95 backdrop-blur-md text-white p-5 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <div class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#22c55e]"></div>
-                <span class="font-bold tracking-wide text-xs uppercase">Concierge</span>
+                <span class="font-bold tracking-wide text-xs uppercase">AI Agent</span>
             </div>
         </div>
         <div id="messages" class="flex-1 p-5 overflow-y-auto bg-gray-50/50 space-y-4 text-xs">
             <div class="flex items-start space-x-2">
                 <div class="w-8 h-8 rounded-full bg-gold flex items-center justify-center text-white text-[10px] font-bold shadow-sm">A</div>
                 <div class="bg-white p-3.5 rounded-2xl rounded-tl-none shadow-sm text-gray-600 border border-gray-100 max-w-[90%] leading-relaxed">
-                    Welcome to Azande. I can check our Sandton schedule for you immediately. What service do you need?
+                    Hello! I am Azande's automated assistant. I can check calendar slots for you instantly. How can I help?
                 </div>
             </div>
         </div>
         <div class="p-4 bg-white border-t border-gray-100">
             <form id="chat-form" onsubmit="sendMessage(event)" class="relative">
-                <input type="text" id="user-input" placeholder="Type here..." class="w-full bg-gray-100 rounded-full pl-5 pr-12 py-3 text-xs focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all">
+                <input type="text" id="user-input" placeholder="Ask about bookings..." class="w-full bg-gray-100 rounded-full pl-5 pr-12 py-3 text-xs focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all">
                 <button type="submit" class="absolute right-2 top-1.5 bg-black text-gold w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-800 transition"><i class="fas fa-arrow-up text-xs"></i></button>
             </form>
         </div>
     </div>
+
     <script>
         function toggleChat() {
             const chatWindow = document.getElementById('chat-window');
@@ -238,11 +254,14 @@
                 chatWindow.classList.add('chat-closed');
             }
         }
+
         async function sendMessage(e) {
             e.preventDefault();
             const input = document.getElementById('user-input');
             const message = input.value;
             if (!message) return;
+
+            // 1. Show User Message
             const messagesDiv = document.getElementById('messages');
             messagesDiv.innerHTML += `
                 <div class="flex items-end justify-end space-x-2 animate-fade-in-up">
@@ -250,6 +269,8 @@
                 </div>`;
             input.value = '';
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+            // 2. Show Loading Spinner
             const loadingId = 'loading-' + Date.now();
             messagesDiv.innerHTML += `
                 <div id="${loadingId}" class="flex items-start space-x-2">
@@ -259,17 +280,76 @@
                     </div>
                 </div>`;
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
-            setTimeout(() => {
+
+            // 3. Dual Webhook Fetch (Test + Production)
+            const webhookTest = 'https://n8n.automania.cloud/webhook-test/AzandeBot';
+            const webhookProd = 'https://n8n.automania.cloud/webhook/AzandeBot';
+
+            try {
+                // We try the Production one first, if it fails, we assume Test mode is active (or vice versa depending on your n8n setup)
+                // For safety, we will send to PROD primarily.
+                const response = await fetch(webhookProd, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ chatInput: message })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Production webhook failed');
+                }
+
+                const data = await response.json();
+                
+                // Remove loading
                 document.getElementById(loadingId).remove();
+                
+                // Show Response
+                const aiResponse = data.output || data.text || "I received your message. (Configure n8n output node)";
+                
                 messagesDiv.innerHTML += `
                     <div class="flex items-start space-x-2">
                         <div class="w-8 h-8 rounded-full bg-gold flex items-center justify-center text-white text-[10px] font-bold">A</div>
                         <div class="bg-white p-3.5 rounded-2xl rounded-tl-none shadow-sm border border-gray-100 max-w-[90%] text-gray-600 leading-relaxed">
-                            (Automania Demo) I am ready to check the calendar. Connect me to n8n to start taking real bookings.
+                            ${aiResponse}
                         </div>
                     </div>`;
                 messagesDiv.scrollTop = messagesDiv.scrollHeight;
-            }, 1000);
+
+            } catch (error) {
+                console.log("Prod failed, trying test webhook...");
+                // Fallback to Test Webhook
+                try {
+                    const testResponse = await fetch(webhookTest, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ chatInput: message })
+                    });
+                    
+                    const testData = await testResponse.json();
+                    document.getElementById(loadingId).remove();
+                    
+                     const aiResponse = testData.output || testData.text || "I'm in Test Mode. Message received.";
+
+                    messagesDiv.innerHTML += `
+                        <div class="flex items-start space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-gold flex items-center justify-center text-white text-[10px] font-bold">A</div>
+                            <div class="bg-white p-3.5 rounded-2xl rounded-tl-none shadow-sm border border-gray-100 max-w-[90%] text-gray-600 leading-relaxed">
+                                [TEST MODE] ${aiResponse}
+                            </div>
+                        </div>`;
+                    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+                } catch (err) {
+                    document.getElementById(loadingId).remove();
+                    messagesDiv.innerHTML += `
+                    <div class="flex items-start space-x-2">
+                        <div class="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-white text-[10px] font-bold">!</div>
+                        <div class="bg-white p-3.5 rounded-2xl rounded-tl-none shadow-sm border border-red-100 text-red-500 text-xs">
+                            Error connecting to Automania Agent. Please check your n8n workflow.
+                        </div>
+                    </div>`;
+                }
+            }
         }
     </script>
 </body>
