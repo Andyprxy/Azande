@@ -12,7 +12,7 @@
         body { font-family: 'Inter', sans-serif; background-color: #f5f5f7; color: #111; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
         
-        /* UPDATED GOLD: Darker and richer for better visibility on white */
+        /* UPDATED GOLD */
         :root { --gold: #b48e43; } 
         .text-gold { color: var(--gold); }
         .bg-gold { background-color: var(--gold); }
@@ -27,17 +27,15 @@
         .group:hover .hover-lift { transform: translateY(-5px); }
         .chat-open { transform: translateY(0) scale(1); opacity: 1; pointer-events: all; }
         .chat-closed { transform: translateY(20px) scale(0.95); opacity: 0; pointer-events: none; }
-        
-        /* New Text Shadow for extra visibility */
         .text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body class="antialiased selection:bg-[#b48e43] selection:text-white">
 
     <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-        <div class="bg-white rounded-full px-8 py-4 flex justify-between items-center w-full max-w-5xl shadow-xl shadow-black/5 border border-white/50">
+        <div class="bg-white rounded-full px-8 py-3 flex justify-between items-center w-full max-w-5xl shadow-xl shadow-black/5 border border-white/50">
             <div class="flex items-center gap-3">
-                <img src="486604295_4151385335145160_33174220502223752_n.jpg" alt="Azande Logo" class="h-10 w-auto object-contain mix-blend-multiply">
+                <img src="486604295_4151385335145160_33174220502223752_n.jpg" alt="Azande Logo" class="h-14 w-auto object-contain mix-blend-multiply scale-125 ml-2">
             </div>
             <div class="hidden md:flex space-x-8 items-center text-sm font-medium text-gray-500">
                 <a href="#services" class="hover:text-black transition duration-300">Services</a>
@@ -70,7 +68,7 @@
             </p>
             <div class="flex justify-center gap-4">
                 <button onclick="toggleChat()" class="bg-black text-white px-10 py-4 rounded-full text-sm font-bold tracking-wide hover:bg-gray-800 transition shadow-2xl transform hover:-translate-y-1">
-                    Ask AI Agent
+                    Chat Live
                 </button>
                 <a href="https://wa.me/27614964840" class="bg-white text-black px-10 py-4 rounded-full text-sm font-bold tracking-wide hover:bg-gray-50 transition shadow-lg transform hover:-translate-y-1 flex items-center gap-2">
                     <i class="fab fa-whatsapp"></i> WhatsApp
@@ -217,7 +215,7 @@
     </footer>
 
     <button onclick="toggleChat()" class="fixed bottom-8 right-8 z-50 bg-black text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300 group ring-4 ring-white/20">
-        <i class="fas fa-robot text-xl group-hover:hidden text-gold"></i>
+        <i class="fas fa-cut text-xl group-hover:hidden text-gold transform -rotate-45"></i>
         <i class="fas fa-times text-xl hidden group-hover:block text-gold"></i>
     </button>
     <div id="chat-window" class="fixed bottom-28 right-8 w-80 bg-white rounded-3xl shadow-2xl z-50 border border-gray-100 transition-all duration-300 chat-closed flex flex-col h-[450px] overflow-hidden ring-1 ring-black/5">
