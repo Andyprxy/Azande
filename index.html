@@ -12,7 +12,7 @@
         body { font-family: 'Inter', sans-serif; background-color: #f5f5f7; color: #111; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
         
-        /* UPDATED GOLD */
+        /* GOLD COLOR */
         :root { --gold: #b48e43; } 
         .text-gold { color: var(--gold); }
         .bg-gold { background-color: var(--gold); }
@@ -28,6 +28,16 @@
         .chat-open { transform: translateY(0) scale(1); opacity: 1; pointer-events: all; }
         .chat-closed { transform: translateY(20px) scale(0.95); opacity: 0; pointer-events: none; }
         .text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+
+        /* CUSTOM ANIMATION: The "Beep" / Life Pulse */
+        @keyframes life-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(180, 142, 67, 0.7); transform: scale(1); }
+            70% { box-shadow: 0 0 0 15px rgba(180, 142, 67, 0); transform: scale(1.05); }
+            100% { box-shadow: 0 0 0 0 rgba(180, 142, 67, 0); transform: scale(1); }
+        }
+        .animate-life {
+            animation: life-pulse 2s infinite;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-[#b48e43] selection:text-white">
@@ -66,10 +76,11 @@
             <p class="text-gray-800 text-lg mb-10 font-light max-w-lg mx-auto leading-relaxed bg-white/60 backdrop-blur-md p-4 rounded-2xl shadow-sm">
                 The premier destination for protective styling and natural hair health in the heart of Sandown Valley.
             </p>
-            <div class="flex justify-center gap-4">
-                <button onclick="toggleChat()" class="bg-black text-white px-10 py-4 rounded-full text-sm font-bold tracking-wide hover:bg-gray-800 transition shadow-2xl transform hover:-translate-y-1">
-                    Chat Live
+            <div class="flex justify-center gap-6 items-center">
+                <button onclick="toggleChat()" class="animate-life bg-black text-white px-10 py-4 rounded-full text-sm font-bold tracking-wide hover:bg-gray-800 transition shadow-2xl">
+                    Chat Live <span class="ml-2 inline-block w-2 h-2 bg-green-500 rounded-full"></span>
                 </button>
+                
                 <a href="https://wa.me/27614964840" class="bg-white text-black px-10 py-4 rounded-full text-sm font-bold tracking-wide hover:bg-gray-50 transition shadow-lg transform hover:-translate-y-1 flex items-center gap-2">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
@@ -77,8 +88,10 @@
         </div>
     </section>
 
-    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto relative">
+        <div class="absolute top-0 left-0 w-32 h-1.5 bg-gold/80 ml-6 md:ml-0 rounded-r-full"></div>
+
+        <div class="text-center mb-16 pt-8">
             <h2 class="text-4xl serif mb-4 text-gray-900">Curated Services</h2>
             <p class="text-gray-500 font-light">Select a category to begin your booking</p>
         </div>
@@ -123,8 +136,10 @@
     </section>
 
     <section id="about" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-1.5 bg-gold/80 mr-6 md:mr-0 rounded-l-full"></div>
+
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 relative z-10 pt-8">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="md:w-1/2">
                     <div class="relative">
@@ -156,8 +171,10 @@
         </div>
     </section>
 
-    <section id="gallery" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+    <section id="gallery" class="py-24 px-6 max-w-7xl mx-auto relative">
+        <div class="absolute top-0 left-0 w-32 h-1.5 bg-gold/80 ml-6 md:ml-0 rounded-r-full"></div>
+
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4 pt-8">
             <div>
                 <span class="text-gold text-xs font-bold tracking-[0.2em] uppercase">Portfolio</span>
                 <h2 class="text-4xl serif mt-2">Selected Works</h2>
